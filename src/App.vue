@@ -7,7 +7,7 @@
         </option>
       </select>
       <br>
-      <audio controls ref="audio">
+      <audio controls ref="audio" class="audio">
         <source :src="activeRadio" type="audio/mpeg">
       </audio>
     </div>
@@ -37,6 +37,12 @@ export default {
 </script>
 
 <style>
+  .player {
+    background: #f1f3f4;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 18px #D5D8E0;
+  }
   .wrap {
     height: 100vh;
     width: 100%;
@@ -46,7 +52,18 @@ export default {
   }
 
   .select {
-    width: 340px;
-    height: 30px;
+    width: 284px;
+    padding: 0 15px;
+    height: 40px;
+    background: none;
+    border: none;
+  }
+
+  .select:focus,
+  .select:active,
+  .audio:focus,
+  .audio:active {
+    outline: none;
+    border: none;
   }
 </style>
